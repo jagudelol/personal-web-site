@@ -1,0 +1,44 @@
+[[main]]
+  name = "Investigación"
+  url = "/es/investigacion/"
+  weight = 10
+
+[[main]]
+  name = "Docencia"
+  url = "/es/docencia/"
+  weight = 20
+
+[[main]]
+  name = "Ponencias"
+  url = "/es/ponencias/"
+  weight = 30
+
+[[main]]
+  name = "HD"
+  url = "/es/hd/"
+  weight = 40
+
+[[main]]
+  name = "Blog"
+  url = "/es/blog/"
+  weight = 50
+
+[[main]]
+  name = "CV"
+  url = "/es/cv/"
+  weight = 60
+
+[[main]]
+  name = "Contacto"
+  url = "/es/contacto/"
+  weight = 70
+
+[[footer]]
+  name = "Ahora"
+  url = "/es/now/"
+  weight = 10
+
+[[footer]]
+  name = "Stack"
+  url = "/es/stack/"
+  weight = 20

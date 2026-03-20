@@ -1,0 +1,28 @@
+/* Ancho máximo aumentado para textos largos */
+.max-w-prose {
+  max-width: 75ch;
+}
+
+/* Tipografía ligeramente más académica */
+article {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* Bloque de cita académica */
+blockquote.academic {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 1.2rem;
+  font-style: italic;
+  color: var(--color-neutral-600);
+}
+
+/* Aviso en subpáginas no listadas */
+.unlisted-notice {
+  font-size: 0.85rem;
+  color: var(--color-neutral-500);
+  border: 1px dashed var(--color-neutral-300);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}

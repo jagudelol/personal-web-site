@@ -1,0 +1,4 @@
+baseURL = "https://jagudelol.github.io/personal-web-site/"
+
+[params]
+  env = "production"

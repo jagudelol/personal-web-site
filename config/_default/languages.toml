@@ -1,0 +1,35 @@
+[es]
+  weight = 1
+  languageName = "Español"
+  title = "Jose Agudelo Londoño — Investigador"
+
+  [es.params]
+    description = "Filósofo, humanista digital, data scientist."
+
+    [es.params.author]
+      name = "Jose Agudelo Londoño"
+      bio = "Filósofo · Humanidades Digitales · Data Science"
+      image = ""
+      headline = "Filósofo · HD · Data Science"
+      links = [
+        { github = "https://github.com/jagudelol" },
+        { orcid = "https://orcid.org/0009-0001-9147-0061" },
+        { email = "mailto:jose.agudelol@udea.edu.co" }
+      ]
+
+[en]
+  weight = 2
+  languageName = "English"
+  title = "Jose Agudelo-Londoño — Researcher"
+
+  [en.params]
+    description = "Philosopher, digital humanist, data scientist."
+
+    [en.params.author]
+      name = "Jose Agudelo-Londoño"
+      bio = "Philosopher, digital humanist, data scientist."
+      links = [
+        { github = "https://github.com/jagudelol" },
+        { orcid = "https://orcid.org/0009-0001-9147-0061" },
+        { email = "mailto:jose.agudelol@udea.edu.co" }
+      ]

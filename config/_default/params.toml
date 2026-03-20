@@ -1,0 +1,35 @@
+colorScheme = "congo"
+defaultAppearance = "auto"
+autoSwitchAppearance = true
+enableSearch = true
+enableCodeCopy = true
+
+[header]
+  layout = "basic"
+  showTitle = true
+
+[footer]
+  showCopyright = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "page"
+  showRecent = true
+  recentLimit = 5
+
+[article]
+  showDate = true
+  showAuthor = true
+  showBreadcrumbs = true
+  showReadingTime = false
+  showTableOfContents = true
+  showPagination = true
+
+[list]
+  showBreadcrumbs = true
+  showTableOfContents = false
+  groupByYear = false
+
+[style]
+  customCSS = ["css/custom.css"]

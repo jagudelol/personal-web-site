@@ -1,0 +1,12 @@
+baseURL = ""
+defaultContentLanguage = "es"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+paginate = 10
+
+theme = "congo"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  linea = "lineas"

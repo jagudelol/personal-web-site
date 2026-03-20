@@ -1,0 +1,26 @@
+{{ if eq (getenv "HUGO_ENV") "production" }}
+<script
+  data-goatcounter="https://jagudelol.goatcounter.com/count"
+  async src="//gc.zgo.at/count.js">
+</script>
+{{ end }}
+
+{{ with .Params.doi }}
+<meta name="citation_doi" content="{{ . }}">
+{{ end }}
+{{ with .Params.title }}
+<meta name="citation_title" content="{{ . }}">
+{{ end }}
+{{ with .Params.date }}
+<meta name="citation_publication_date" content="{{ dateFormat "2006/01/02" . }}">
+{{ end }}
+{{ with site.Params.author.name }}
+<meta name="citation_author" content="{{ . }}">
+{{ end }}
+
+<meta property="og:title" content="{{ .Title }} — {{ site.Title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ with .Summary }}
+<meta property="og:description" content="{{ . }}" />
+{{ end }}
