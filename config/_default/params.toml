@@ -1,4 +1,4 @@
-colorScheme = "congo"
+colorScheme = "ocean"
 defaultAppearance = "auto"
 autoSwitchAppearance = true
 enableSearch = true
@@ -14,7 +14,7 @@ enableCodeCopy = true
   showScrollToTop = true
 
 [homepage]
-  layout = "page"
+  layout = "profile"
   showRecent = true
   recentLimit = 5
 

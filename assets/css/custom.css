@@ -1,28 +1,32 @@
-/* Ancho máximo aumentado para textos largos */
-.max-w-prose {
-  max-width: 75ch;
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400&display=swap');
+
+/* Tipografía con !important para sobrescribir Tailwind */
+.prose, article, p, li {
+  font-family: 'Source Serif 4', Georgia, serif !important;
 }
 
-/* Tipografía ligeramente más académica */
-article {
-  font-size: 1.05rem;
-  line-height: 1.8;
+code, pre, kbd {
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
-/* Bloque de cita académica */
-blockquote.academic {
-  border-left: 3px solid var(--color-primary);
-  padding-left: 1.2rem;
+/* Interlineado académico */
+.prose {
+  line-height: 1.85 !important;
+  font-size: 1.05rem !important;
+}
+
+/* Cita académica */
+blockquote {
   font-style: italic;
-  color: var(--color-neutral-600);
+  opacity: 0.85;
 }
 
-/* Aviso en subpáginas no listadas */
+/* Aviso subpáginas no listadas */
 .unlisted-notice {
   font-size: 0.85rem;
-  color: var(--color-neutral-500);
-  border: 1px dashed var(--color-neutral-300);
+  border: 1px dashed;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   margin-bottom: 1.5rem;
+  opacity: 0.7;
 }

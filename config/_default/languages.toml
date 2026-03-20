@@ -9,8 +9,7 @@
     [es.params.author]
       name = "Jose Agudelo Londoño"
       bio = "Filósofo · Humanidades Digitales · Data Science"
-      image = ""
-      headline = "Filósofo · HD · Data Science"
+      image = "img/avatar.png"
       links = [
         { github = "https://github.com/jagudelol" },
         { orcid = "https://orcid.org/0009-0001-9147-0061" },
@@ -28,6 +27,7 @@
     [en.params.author]
       name = "Jose Agudelo-Londoño"
       bio = "Philosopher, digital humanist, data scientist."
+      image = "img/avatar.png"
       links = [
         { github = "https://github.com/jagudelol" },
         { orcid = "https://orcid.org/0009-0001-9147-0061" },
