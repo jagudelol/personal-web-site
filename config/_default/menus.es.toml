@@ -14,6 +14,11 @@
   weight = 30
 
 [[main]]
+  name = "Eventos"
+  url = "/es/eventos/"
+  weight = 35
+
+[[main]]
   name = "HD"
   url = "/es/hd/"
   weight = 40

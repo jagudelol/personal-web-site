@@ -1,0 +1,61 @@
+{{ define "main" }}
+  <header>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  {{ $now := now }}
+  {{ $upcoming := slice }}
+  {{ $past := slice }}
+
+  {{ range .Pages }}
+    {{ if .Params.eventDate }}
+      {{ $t := time .Params.eventDate }}
+      {{ if $t.After $now }}
+        {{ $upcoming = $upcoming | append . }}
+      {{ else }}
+        {{ $past = $past | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if $upcoming }}
+    <h2 class="mt-8 text-2xl font-bold text-neutral-700 dark:text-neutral-300">Próximos</h2>
+    <hr class="w-36 border-dotted border-neutral-400 mb-4" />
+    {{ range sort $upcoming "Params.eventDate" "asc" }}
+      <article class="prose dark:prose-invert mb-6">
+        <h3 class="mb-1"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          {{ with .Params.eventDate }}📅 {{ dateFormat "2 January 2006" (time .) }}{{ end }}
+          {{ with .Params.location }} · 📍 {{ . }}{{ end }}
+          {{ with .Params.eventType }} · {{ . }}{{ end }}
+        </div>
+        {{ with .Summary }}<p class="mt-2">{{ . }}</p>{{ end }}
+        {{ with .Params.eventUrl }}
+          <a href="{{ . }}" target="_blank" class="text-sm">Más información →</a>
+        {{ end }}
+      </article>
+    {{ end }}
+  {{ end }}
+
+  {{ if $past }}
+    <h2 class="mt-12 text-2xl font-bold text-neutral-500 dark:text-neutral-400">Pasados</h2>
+    <hr class="w-36 border-dotted border-neutral-400 mb-4" />
+    {{ range sort $past "Params.eventDate" "desc" }}
+      <article class="prose dark:prose-invert mb-4 opacity-60">
+        <h3 class="mb-1"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          {{ with .Params.eventDate }}📅 {{ dateFormat "2 January 2006" (time .) }}{{ end }}
+          {{ with .Params.location }} · 📍 {{ . }}{{ end }}
+          {{ with .Params.eventType }} · {{ . }}{{ end }}
+        </div>
+      </article>
+    {{ end }}
+  {{ end }}
+
+  {{ if and (not $upcoming) (not $past) }}
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8"><em>No hay eventos registrados.</em></p>
+    </section>
+  {{ end }}
+
+{{ end }}
