@@ -1,7 +1,7 @@
 [es]
   weight = 1
   languageName = "Español"
-  title = "Jose Agudelo Londoño"
+  title = "Jose Agudelo"
 
   [es.params]
     description = "Filósofo, humanista digital, data scientist."
@@ -18,7 +18,7 @@ IA, y filosofía teórica en realismo, ontología social e individuación.
     [es.params.author]
   name = "Jose Agudelo Londoño"
   headline = "Humanista digital. Con formación en filosofía, experiencia en comunicación e iniciando en ciencia de datos."
-  image = "img/avatar.png"
+  image = "img/avatar.jpg"
   links = [
     { github = "https://github.com/jagudelol" },
     { orcid = "https://orcid.org/0009-0001-9147-0061" },
@@ -28,7 +28,7 @@ IA, y filosofía teórica en realismo, ontología social e individuación.
 [en]
   weight = 2
   languageName = "English"
-  title = "Jose Agudelo-Londoño"
+  title = "Jose Agudelo"
 
   [en.params]
     description = "Philosopher, digital humanist, data scientist."
@@ -41,7 +41,7 @@ philosophy of technology and AI, and natural language processing.
     [en.params.author]
       name = "Jose Agudelo Londoño"
       bio = "Philosopher · Digital Humanities · Data Science"
-      image = "img/avatar.png"
+      image = "img/avatar.jpg"
       links = [
         { github = "https://github.com/jagudelol" },
         { orcid = "https://orcid.org/0009-0001-9147-0061" },
