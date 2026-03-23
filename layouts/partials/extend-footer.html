@@ -1,7 +1,8 @@
-<footer class="footer">
-  <div class="footer-content">
-    {{ range site.Menus.footer }}
-    <a href="{{ .URL }}">{{ .Name }}</a>
-    {{ end }}
-  </div>
-</footer>
+<div class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">
+  <a href="https://creativecommons.org/licenses/by/4.0/" 
+     target="_blank" 
+     class="hover:underline decoration-primary-500">
+    CC BY 4.0
+  </a>
+  · Última actualización: {{ now.Format "January 2006" }}
+</div>

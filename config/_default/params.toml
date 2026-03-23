@@ -10,7 +10,7 @@ enableCodeCopy = true
 
 [footer]
   showCopyright = true
-  showAppearanceSwitcher = true
+  showAppearanceSwitcher = false
   showScrollToTop = true
 
 [homepage]
