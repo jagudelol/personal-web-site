@@ -1,0 +1,6 @@
+{{ define "main" }}
+  {{ partial "profile.html" (dict "align" "center" "Page" .) }}
+  {{ if site.Params.homepage.showRecent }}
+    {{ partial "recent-articles.html" . }}
+  {{ end }}
+{{ end }}

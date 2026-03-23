@@ -1,3 +1,4 @@
 ---
-title: "Investigacion"
+title: "Investigación"
+showTableOfContents: false
 ---
