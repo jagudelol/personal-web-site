@@ -1,0 +1,48 @@
+{{ define "main" }}
+  <header>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  {{ $types := slice "ponencia" "conferencia" "poster" "comunicacion" "panel" }}
+  {{ $labels := dict
+    "ponencia" "Ponencias en congreso"
+    "conferencia" "Conferencias invitadas"
+    "poster" "Posters"
+    "comunicacion" "Comunicaciones breves"
+    "panel" "Mesas redondas y paneles"
+  }}
+
+  {{ range $types }}
+    {{ $type := . }}
+    {{ $talks := where $.Pages "Params.talkType" $type }}
+    {{ if $talks }}
+      <h2 class="mt-10 text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+        {{ index $labels $type }}
+      </h2>
+      <hr class="w-36 border-dotted border-neutral-400 mb-4" />
+      {{ range sort $talks "Date" "desc" }}
+        <article class="prose dark:prose-invert mb-6">
+          <h3 class="mb-1">{{ .Title }}</h3>
+          <div class="text-sm text-neutral-500 dark:text-neutral-400">
+            {{ with .Params.event }}📅 {{ . }}{{ end }}
+            {{ with .Params.institution }}· {{ . }}{{ end }}
+            {{ with .Params.location }}· 📍 {{ . }}{{ end }}
+            · {{ .Date.Format "2006" }}
+            {{ with .Params.slides }}· <a href="{{ . }}" target="_blank">Slides</a>{{ end }}
+            {{ with .Params.posterUrl }}· <a href="{{ . }}" target="_blank">Poster</a>{{ end }}
+          </div>
+          {{ with .Params.abstract }}
+            <p class="mt-2 text-sm">{{ . }}</p>
+          {{ end }}
+        </article>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if not .Pages }}
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8"><em>No hay ponencias registradas.</em></p>
+    </section>
+  {{ end }}
+
+{{ end }}
