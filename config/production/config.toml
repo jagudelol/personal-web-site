@@ -1,4 +1,4 @@
-baseURL = "https://jagudelol.github.io/personal-web-site/"
+baseURL = "https://joseagudelo.com/"
 
 [params]
   env = "production"
