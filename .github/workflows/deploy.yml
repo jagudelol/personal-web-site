@@ -25,6 +25,18 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Compilar CSS de Congo
+        run: |
+          cd themes/congo
+          npm install
+          npm run build
+          cd ../..
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
