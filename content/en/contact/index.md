@@ -8,7 +8,7 @@ translationKey: "contact"
 
 ## Email
 
-`tu@dominio.com`
+`contact@joseagudelo.com`
 
 ---
 

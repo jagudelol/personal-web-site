@@ -7,7 +7,7 @@ showReadingTime: false
 
 ## Correo
 
-`tu@dominio.com`
+`contact@joseagudelo.com`
 
 ---
 
