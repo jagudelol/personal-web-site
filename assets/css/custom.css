@@ -35,3 +35,13 @@ blockquote {
 #to-top a {
   top: calc(100vh - 3.5rem) !important;
 }
+
+/* Header: nombre más compacto */
+header nav a[rel="me"] {
+  font-size: 0.95rem;
+}
+
+/* Header: menú más compacto */
+header nav ul li {
+  font-size: 0.85rem;
+}
