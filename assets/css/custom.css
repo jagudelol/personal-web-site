@@ -30,3 +30,8 @@ blockquote {
   margin-bottom: 1.5rem;
   opacity: 0.7;
 }
+
+/* Bajar la flecha de scroll-to-top para evitar solapamiento con footer */
+#to-top a {
+  top: calc(100vh - 3.5rem) !important;
+}
