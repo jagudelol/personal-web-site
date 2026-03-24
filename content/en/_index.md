@@ -1,6 +1,5 @@
 ---
-title: "Jose Agudelo-Londoño"
+title: "Jose Agudelo"
 description: "Philosopher, digital humanist, data scientist."
+translationKey: "home"
 ---
-
-Welcome. Here you will find my research, teaching, and digital projects.

@@ -10,3 +10,6 @@ theme = "congo"
   tag = "tags"
   category = "categories"
   linea = "lineas"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

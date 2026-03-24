@@ -1,14 +1,26 @@
 [[main]]
   name = "Research"
-  pageRef = "/research"
+  url = "/en/research/"
   weight = 10
 
 [[main]]
   name = "CV"
-  pageRef = "/cv"
+  url = "/en/cv/"
   weight = 20
 
 [[main]]
   name = "Contact"
-  pageRef = "/contact"
+  url = "/en/contact/"
   weight = 30
+
+[[main]]
+  name = ""
+  weight = 80
+  [main.params]
+    action = "locale"
+
+[[main]]
+  name = ""
+  weight = 90
+  [main.params]
+    action = "appearance"
