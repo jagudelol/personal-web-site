@@ -45,3 +45,13 @@ header nav a[rel="me"] {
 header nav ul li {
   font-size: 0.85rem;
 }
+
+/* Header: nombre más compacto */
+header nav a[rel="me"] {
+  font-size: 1.0rem;
+}
+
+/* Header: menú más compacto */
+header nav ul li {
+  font-size: 0.9rem;
+}
