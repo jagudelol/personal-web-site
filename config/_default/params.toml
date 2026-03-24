@@ -30,6 +30,7 @@ enableCodeCopy = true
   showBreadcrumbs = true
   showTableOfContents = false
   groupByYear = false
+  showSummary = true
 
 [style]
   customCSS = ["css/custom.css"]

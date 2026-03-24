@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <header>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  {{ $types := slice "pregrado" "posgrado" "seminario" "taller" }}
+  {{ $labels := dict
+    "pregrado" "Pregrado"
+    "posgrado" "Posgrado"
+    "seminario" "Seminarios"
+    "taller" "Talleres"
+  }}
+
+  {{ range $types }}
+    {{ $type := . }}
+    {{ $courses := where $.Pages "Params.courseType" $type }}
+    {{ if $courses }}
+      <h2 class="mt-10 text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+        {{ index $labels $type }}
+      </h2>
+      <hr class="w-36 border-dotted border-neutral-400 mb-4" />
+      {{ range sort $courses "Date" "desc" }}
+        <article class="prose dark:prose-invert mb-6">
+          <h3 class="mb-1"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <div class="text-sm text-neutral-500 dark:text-neutral-400">
+            {{ with .Params.institution }}🎓 {{ . }}{{ end }}
+            {{ with .Params.period }}· {{ . }}{{ end }}
+            {{ with .Params.hours }}· {{ . }}h{{ end }}
+            {{ with .Params.syllabus }}· <a href="{{ . }}" target="_blank">Syllabus</a>{{ end }}
+            {{ with .Params.materials }}· <a href="{{ . }}">Materiales →</a>{{ end }}
+          </div>
+          {{ with .Params.abstract }}
+            <p class="mt-2 text-sm">{{ . }}</p>
+          {{ end }}
+        </article>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if not .Pages }}
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8"><em>No hay cursos registrados.</em></p>
+    </section>
+  {{ end }}
+
+{{ end }}
