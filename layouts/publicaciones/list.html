@@ -1,0 +1,53 @@
+{{ define "main" }}
+  <header>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  {{ $types := slice "articulo" "capitulo" "libro" "tesis" "preprint" "resena" }}
+  {{ $labels := dict
+    "articulo" "Artículos en revista"
+    "capitulo" "Capítulos de libro"
+    "libro" "Libros"
+    "tesis" "Trabajos de grado"
+    "preprint" "Preprints"
+    "resena" "Reseñas"
+  }}
+
+  {{ range $types }}
+    {{ $type := . }}
+    {{ $pubs := where $.Pages "Params.pubType" $type }}
+    {{ if $pubs }}
+      <h2 class="mt-10 text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+        {{ index $labels $type }}
+      </h2>
+      <hr class="w-36 border-dotted border-neutral-400 mb-4" />
+      {{ range sort $pubs "Date" "desc" }}
+        <article class="prose dark:prose-invert mb-6">
+          <h3 class="mb-1">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <div class="text-sm text-neutral-500 dark:text-neutral-400">
+            {{ with .Params.journal }}📄 {{ . }}{{ end }}
+            {{ with .Params.book }}📚 {{ . }}{{ end }}
+            {{ with .Params.publisher }}· {{ . }}{{ end }}
+            {{ with .Params.institution }}🎓 {{ . }}{{ end }}
+            {{ with .Params.repository }}🗃 {{ . }}{{ end }}
+            · {{ .Date.Format "2006" }}
+            {{ with .Params.doi }}· <a href="https://doi.org/{{ . }}" target="_blank">DOI</a>{{ end }}
+            {{ with .Params.pdf }}· <a href="{{ . }}" target="_blank">PDF</a>{{ end }}
+          </div>
+          {{ with .Params.abstract }}
+            <p class="mt-2 text-sm">{{ . }}</p>
+          {{ end }}
+        </article>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if not .Pages }}
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8"><em>No hay publicaciones registradas.</em></p>
+    </section>
+  {{ end }}
+
+{{ end }}

@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <header>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  {{ range sort .Pages "Date" "desc" }}
+    <article class="prose dark:prose-invert mb-8 border-b border-neutral-200 dark:border-neutral-700 pb-8">
+      <h2 class="mt-6"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        {{ with .Params.status }}
+          {{ if eq . "en-curso" }}🟡 En curso{{ else }}🟢 Terminado{{ end }}
+        {{ end }}
+        {{ with .Params.institution }}· 🏛 {{ . }}{{ end }}
+      </div>
+      {{ with .Params.collaborators }}
+        <div class="text-sm mt-2">👥 Colaboradores: {{ delimit . ", " }}</div>
+      {{ end }}
+      {{ with .Params.funders }}
+        <div class="text-sm">💰 Financiación: {{ delimit . ", " }}</div>
+      {{ end }}
+      {{ with .Params.abstract }}
+        <p class="mt-2">{{ . }}</p>
+      {{ end }}
+    </article>
+  {{ end }}
+
+  {{ if not .Pages }}
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8"><em>No hay proyectos registrados.</em></p>
+    </section>
+  {{ end }}
+{{ end }}

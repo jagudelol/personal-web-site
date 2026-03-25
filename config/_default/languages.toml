@@ -2,15 +2,18 @@
   languageCode = "es"
   weight = 1
   languageName = "Español"
-  title = "Jose Agudelo"
+  title = "Jose Agudelo — Humanista Digital"
 
   [es.params]
     description = "Filósofo, humanista digital, data scientist."
+    intro = """
+Trabajo en la intersección entre filosofía, humanidades digitales y ciencia de datos. Me interesa cómo las tecnologías de lenguaje — desde los corpus históricos hasta los modelos de lenguaje — transforman las formas de producir, organizar y disputar el conocimiento. Mi formación combina filosofía política y social, teoría crítica y realismo contemporáneo, con experiencia práctica en NLP, recuperación de información y sistemas de machine learning. Actualmente exploro preguntas sobre agencia, individuación y ontología social en el contexto de la IA, la vida artificial y la ecología política.
+"""
 
     [es.params.author]
       name = "Jose Agudelo Londoño"
-      bio = "Humanista digital. Con formación en filosofía, experiencia en comunicación e iniciando en ciencia de datos."
-      headline = "Humanista digital. Con formación en filosofía, experiencia en comunicación e iniciando en ciencia de datos."
+      bio = "Jose Agudelo Londoño es humanista digital con formación en filosofía y ciencia de datos. Trabaja en filosofía de la tecnología, NLP y representación del conocimiento."
+      headline = "Humanista digital. Con formación en filosofía, experiencia en comunicación y profundizando en ciencia de datos."
       image = "img/avatar.jpg"
       links = [
         { github = "https://github.com/jagudelol" },
@@ -24,7 +27,7 @@
   languageCode = "en"
   weight = 2
   languageName = "English"
-  title = "Jose Agudelo"
+  title = "Jose Agudelo — Digital Humanist"
 
   [en.params]
     description = "Philosopher, digital humanist, data scientist."

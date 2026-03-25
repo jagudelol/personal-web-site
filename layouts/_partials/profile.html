@@ -19,10 +19,10 @@
     {{ end }}
   {{ end }}
   <h1 class="text-4xl font-extrabold">
-    {{ with site.Language.Params.Author.name }}<a href="/es/about/" class="hover:underline decoration-primary-500">{{ . }}</a>{{ else }}{{ site.Title }}{{ end }}
+    {{ with site.Language.Params.Author.name }}<a>{{ . }}</a>{{ else }}{{ site.Title }}{{ end }}
   </h1>
   {{ with site.Language.Params.Author.headline }}
-    <h2 class="text-base text-neutral-500 dark:text-neutral-400 text-center">
+    <h2 class="text-lg text-neutral-500 dark:text-neutral-400 text-center">
       {{ . | markdownify | emojify }}
     </h2>
   {{ end }}

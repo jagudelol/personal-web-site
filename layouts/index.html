@@ -1,5 +1,10 @@
 {{ define "main" }}
   {{ partial "profile.html" (dict "align" "center" "Page" .) }}
+  {{ with site.Language.Params.intro }}
+    <article class="prose max-w-prose dark:prose-invert mt-8 mx-auto text-center">
+      {{ . | markdownify }}
+    </article>
+  {{ end }}
   {{ if site.Params.homepage.showRecent }}
     {{ partial "recent-articles.html" . }}
   {{ end }}

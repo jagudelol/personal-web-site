@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <header>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+    <a href="/comunicacion/ponencias/" class="prose dark:prose-invert border border-neutral-200 dark:border-neutral-700 rounded-lg p-6 hover:border-primary-500 transition-colors">
+      <h2 class="mt-0">Ponencias</h2>
+      <p class="text-sm text-neutral-500">Congresos, conferencias invitadas, posters y comunicaciones.</p>
+    </a>
+    <a href="/comunicacion/eventos/" class="prose dark:prose-invert border border-neutral-200 dark:border-neutral-700 rounded-lg p-6 hover:border-primary-500 transition-colors">
+      <h2 class="mt-0">Eventos</h2>
+      <p class="text-sm text-neutral-500">Próximos y pasados eventos académicos.</p>
+    </a>
+    <a href="/comunicacion/otros/" class="prose dark:prose-invert border border-neutral-200 dark:border-neutral-700 rounded-lg p-6 hover:border-primary-500 transition-colors">
+      <h2 class="mt-0">Otros</h2>
+      <p class="text-sm text-neutral-500">Entrevistas, podcasts y charlas divulgativas.</p>
+    </a>
+  </div>
+{{ end }}

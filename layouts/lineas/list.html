@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <header>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  {{ range sort .Pages "Date" "desc" }}
+    <article class="prose dark:prose-invert mb-8 border-b border-neutral-200 dark:border-neutral-700 pb-8">
+      <h2 class="mt-6"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{ with .Params.abstract }}
+        <p class="text-neutral-600 dark:text-neutral-400">{{ . }}</p>
+      {{ end }}
+    </article>
+  {{ end }}
+{{ end }}

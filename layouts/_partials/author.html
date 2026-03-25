@@ -15,7 +15,7 @@
           {{ i18n "author.byline_title" | markdownify | emojify }}
         </div>
         <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-          <a href="/es/about/" class="hover:underline decoration-primary-500">{{ . }}</a>
+          <a>{{ . }}</a>
         </div>
       {{ end }}
       {{ with .Site.Language.Params.Author.bio | markdownify | emojify }}

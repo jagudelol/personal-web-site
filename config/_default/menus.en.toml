@@ -1,11 +1,11 @@
 [[main]]
-  name = "Research"
-  url = "/en/research/"
+  name = "Who am I?"
+  url = "/en/about/"
   weight = 10
-
+  
 [[main]]
-  name = "CV"
-  url = "/en/cv/"
+  name = "Research"
+  url = "/en/investigacion/"
   weight = 20
 
 [[main]]

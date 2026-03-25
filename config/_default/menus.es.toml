@@ -1,58 +1,50 @@
 [[main]]
-  name = "Investigación"
-  url = "/es/investigacion/"
+  name = "¿Quién soy?"
+  url = "/about/"
   weight = 10
-
+  
 [[main]]
-  name = "Docencia"
-  url = "/es/docencia/"
+  name = "Investigación"
+  url = "/investigacion/"
   weight = 20
 
 [[main]]
-  name = "Ponencias"
-  url = "/es/ponencias/"
+  name = "Docencia"
+  url = "/docencia/"
   weight = 30
-
+  
 [[main]]
-  name = "Eventos"
-  url = "/es/eventos/"
-  weight = 35
-
-[[main]]
-  name = "HD"
-  url = "/es/hd/"
+  name = "Comunicación"
+  url = "/comunicacion/"
   weight = 40
 
 [[main]]
-  name = "Blog"
-  url = "/es/blog/"
+  name = "HD"
+  url = "/hd/"
   weight = 50
 
 [[main]]
-  name = "CV"
-  url = "/es/cv/"
+  name = "Blog"
+  url = "/blog/"
   weight = 60
 
 [[main]]
   name = "Contacto"
-  url = "/es/contacto/"
+  url = "/contact/"
   weight = 70
 
-# Selector de idioma en el header
 [[main]]
   name = ""
   weight = 80
   [main.params]
     action = "locale"
 
-# Toggle claro/oscuro en el header
 [[main]]
   name = ""
   weight = 90
   [main.params]
     action = "appearance"
 
-# RSS feed
 [[main]]
   name = "RSS"
   url = "/index.xml"
@@ -63,10 +55,10 @@
 
 [[footer]]
   name = "Ahora"
-  url = "/es/now/"
+  url = "/now/"
   weight = 10
 
 [[footer]]
   name = "Stack"
-  url = "/es/stack/"
+  url = "/stack/"
   weight = 20
